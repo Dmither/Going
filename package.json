@@ -1,0 +1,36 @@
+{
+  "name": "going",
+  "version": "1.0.0",
+  "description": "Formerly Scott’s Cheap Flights",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmither/Going.git"
+  },
+  "author": "Dmither",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmither/Going/issues"
+  },
+  "homepage": "https://github.com/Dmither/Going#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.58.3",
+    "webpack": "^5.75.0",
+    "webpack-stream": "^7.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+@use "./reset.css";
+@use "./header.scss";
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular);
+
+body{
+	font-family: "Roboto";
+	display: flex;
+	flex-direction: column;
+}
+
+.main{
+	flex-grow: 1;
+}
