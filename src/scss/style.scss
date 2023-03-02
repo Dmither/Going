@@ -12,3 +12,90 @@ body{
 .main{
 	flex-grow: 1;
 }
+
+.hero {
+	min-height: 100vh;
+	background-color: #004449;
+	display: flex;
+	flex-direction: column;
+	&__container {
+		flex-grow: 1;
+		padding: 
+			calc(30px + 120 * (100vw - 320px) / (1200 - 320))
+			16px;
+		display: flex;
+		flex-direction: column;
+		
+	}
+	&__main {
+		max-width: 600px;
+		margin: 0 auto;
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		.hero__title {
+			margin-bottom: 24px;
+			max-width: 600px;
+			font-size: calc(40px + 40 * (100vw - 320px) / (1200 - 320));
+			line-height: 1.1;
+			color: #FFFEF0;
+			span{
+				color: #FFAC7F;
+			}
+		}
+		.hero__subtitle {
+			max-width: 495px;
+			margin-bottom: 24px;
+			font-size: calc(20px + 12 * (100vw - 320px) / (1200 - 320));
+			line-height: 1.5;
+			color: #FFFEF0;
+		}
+		.hero__btn {
+			margin-bottom: 40px;
+			padding:
+				calc(8px + 8 * (100vw - 320px) / (1200 - 320))
+				calc(16px + 16 * (100vw - 320px) / (1200 - 320));
+			border-radius: 28px;
+			background-color: #0BFF80;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			font-size: calc(13px + 3 * (100vw - 320px) / (1200 - 320));
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #004449;
+			svg{
+				width: calc(14px + 10 * (100vw - 320px) / (1200 - 320));
+			}
+			&:hover, &:focus{
+				outline: none;
+				background-color: #FFFEF0;
+				box-shadow: 0 0 5px #0BFF80;
+			}
+		}
+	}
+	&__bot {
+		display: flex;
+		flex-direction: column;
+		p{
+			text-align: center;
+			margin-bottom: calc(20px + 28 * (100vw - 320px) / (1200 - 320));
+			font-size: 18px;
+			line-height: 1.33;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #FFFEF0;
+		}
+		.hero__partners {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 16px;
+			
+		}
+	}
+}
