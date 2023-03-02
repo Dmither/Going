@@ -1,0 +1,104 @@
+.footer__container {
+  padding-right: calc(15px + (8) * ((100vw - 320px) / (1200 - 320)));
+  padding-left: calc(15px + (8) * ((100vw - 320px) / (1200 - 320)));
+}
+.footer__menu {
+  padding-top: calc(24px + (40) * ((100vw - 320px) / (1200 - 320)));
+  padding-bottom: calc(24px + (40) * ((100vw - 320px) / (1200 - 320)));
+  background-color: #004449;
+}
+.footer__cats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: calc(15px + 30 * ((100vw - 320px) / (1200 - 320)));
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+.category {
+  display: flex;
+  flex-direction: column;
+}
+.category__title {
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #FFFEF0;
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+    &:hover, &:focus{
+      text-shadow: 0 0 5px #D7FFC2;
+    }
+  }
+}
+.category__body {
+  transition: all 0.2s ease 0s;
+}
+.category__list {
+  padding-bottom: 10px;
+  &_social{
+    display: flex;
+    align-items: center;
+    a{
+      padding: 8px;
+      &:hover, &:focus{
+        svg{
+          outline: none;
+          -webkit-filter: drop-shadow(0 0 5px #D7FFC2);
+                  filter: drop-shadow(0 0 5px #D7FFC2);
+        }
+      }
+    }
+  }
+}
+.category__link {
+  display: block;
+  padding: 8px 0;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFEF0;
+  &:hover, &:focus{
+    outline: none;
+    text-shadow: 0 0 5px #D7FFC2;
+  }
+}
+
+.footer__bot {
+  background-color: #FFFEF0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__logo {
+}
+.footer__copy {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  a{
+    display: block;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #004449;
+    position: relative;
+    &:hover, &:focus{
+      outline: none;
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #004449;
+      }
+    }
+  }
+}

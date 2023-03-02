@@ -258,6 +258,116 @@ h6 {
   transform: translate(0, 50%) rotate(-45deg);
 }
 
+.footer__container {
+  padding-right: calc(15px + 8 * (100vw - 320px) / 880);
+  padding-left: calc(15px + 8 * (100vw - 320px) / 880);
+}
+
+.footer__menu {
+  padding-top: calc(24px + 40 * (100vw - 320px) / 880);
+  padding-bottom: calc(24px + 40 * (100vw - 320px) / 880);
+  background-color: #004449;
+}
+
+.footer__cats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: calc(15px + 30 * (100vw - 320px) / 880);
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+}
+
+.category__title {
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #FFFEF0;
+}
+
+.category__body {
+  transition: all 0.2s ease 0s;
+}
+
+.category__list {
+  padding-bottom: 10px;
+}
+
+.category__list_social {
+  display: flex;
+  align-items: center;
+}
+
+.category__list_social a {
+  padding: 8px;
+}
+
+.category__list_social a:hover svg,
+.category__list_social a:focus svg {
+  outline: none;
+  -webkit-filter: drop-shadow(0 0 5px #D7FFC2);
+  filter: drop-shadow(0 0 5px #D7FFC2);
+}
+
+.category__link {
+  display: block;
+  padding: 8px 0;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFEF0;
+}
+
+.category__link:hover,
+.category__link:focus {
+  outline: none;
+  text-shadow: 0 0 5px #D7FFC2;
+}
+
+.footer__bot {
+  background-color: #FFFEF0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__copy {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.footer__copy a {
+  display: block;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #004449;
+  position: relative;
+}
+
+.footer__copy a:hover,
+.footer__copy a:focus {
+  outline: none;
+}
+
+.footer__copy a:hover::after,
+.footer__copy a:focus::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #004449;
+}
+
 body {
   font-family: "Roboto";
   display: flex;
@@ -295,5 +405,19 @@ body {
 
   .header__burger {
     display: block;
+  }
+
+  .footer__cats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .category__title {
+    margin-bottom: 0;
+  }
+
+  .category__title:hover,
+  .category__title:focus {
+    text-shadow: 0 0 5px #D7FFC2;
   }
 }
