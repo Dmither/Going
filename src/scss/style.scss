@@ -111,6 +111,8 @@ body{
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+		display: flex;
+		flex-direction: column;
 	}
 	.how__title {
 		font-size: calc(24px + 24 * (100vw - 320px) / (1200 - 320));
@@ -130,8 +132,10 @@ body{
 		}
 	}
 	.how__stages {
+		flex: 1 1 auto;
 		margin-bottom: 20px;
 		display: flex;
+		align-items: flex-start;
 		gap: calc(24px + 24 * (100vw - 320px) / (1200 - 320));
 		@media (max-width: 767px) {
 			flex-wrap: wrap;
@@ -220,13 +224,20 @@ body{
 	}
 	.how__btn {
 		padding: 
-			calc(8px + 8 * (100vw - 320px) / (1200 - 320))
-			calc(16px + 16 * (100vw - 320px) / (1200 - 320));
+			calc(7px + 8 * (100vw - 320px) / (1200 - 320))
+			calc(15px + 16 * (100vw - 320px) / (1200 - 320));
+		border: 1px solid #483CFF;
 		background-color: #483CFF;
 		border-radius: 30px;
 		font-size: calc(13px + 3 * (100vw - 320px) / (1200 - 320));
 		line-height: 1.5;
 		letter-spacing: 0.1em;
 		color: #FFFEF0;
+		transition: all 0.2s ease 0s;
+		&:hover, &:focus{
+			background-color: #FFFEF0;
+			color: #483CFF;
+			box-shadow: 0 0 5px #483CFF;
+		}
 	}
 }
